@@ -66,18 +66,17 @@
     .meta{color:var(--muted);font-size:15px;margin:2px 0 0}
 
     /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .gallery figure{margin:0}
-    .gallery img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
+    .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 0 8px;scrollbar-width:thin;scrollbar-color:var(--accent) var(--line)}
+    .gallery figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+    .gallery img{display:block;height:360px;width:auto;max-width:none;border:1px solid var(--line)}
 
     footer{padding:26px 0 36px;border-top:2px solid var(--accent);color:var(--muted);font-size:14px;text-align:center}
 
     @media (max-width:820px){
       .hero{grid-template-columns:1fr;gap:26px;padding:40px 0 30px}
       .portrait{order:-1;max-width:200px}
-      .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none}
-      .gallery::-webkit-scrollbar{display:none}
-      .gallery figure{flex:0 0 70%;scroll-snap-align:center}
+      .gallery{margin:0 -16px;padding:0 16px 8px}
+      .gallery img{height:280px}
     }
     @media (max-width:600px){
       .wrap{width:calc(100% - 32px)}
