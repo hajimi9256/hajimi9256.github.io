@@ -46,8 +46,12 @@
 
     /* Sections */
     section{padding:34px 0;border-top:1px solid var(--line)}
-    .panel{background:var(--soft);border-left:3px solid var(--accent);padding:20px 24px}
+    .panel{background:var(--bg);padding:0}
     .panel p{margin:0}
+    ul.dots{list-style:none;margin:0;padding:0}
+    ul.dots li{position:relative;padding-left:22px;margin:0 0 16px}
+    ul.dots li:last-child{margin-bottom:0}
+    ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 
     table{width:100%;border-collapse:collapse;font-size:16px}
     th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -118,16 +122,10 @@
 
   <section id="publications">
     <p class="label">Publications</p>
-    <div class="panel">
-      <div class="row">
-        <span class="idx">2026</span>
-        <p>J. Hu, Y. Wang, and B. Qi, “Sample complexity of observable estimation: From information limits to measurement protocols,” <em>submitted to Automatica</em>.</p>
-      </div>
-      <div class="row">
-        <span class="idx">Jul. 2026</span>
-        <p>J. Hu and Y. Wang, “Inductive Hamiltonian quantum network: An interpretable framework for hierarchical feature modeling,” in <em>Proc. 45th Chinese Control Conference (CCC)</em>, Changsha, China.</p>
-      </div>
-    </div>
+    <ul class="dots">
+      <li>J. Hu, Y. Wang, and B. Qi, Sample complexity of observable estimation: From information limits to measurement protocols, submitted to Automatica, 2026.</li>
+      <li>J. Hu and Y. Wang, Inductive Hamiltonian quantum network: An interpretable framework for hierarchical feature modeling, in Proc. 45th Chinese Control Conf. (CCC), Changsha, China, Jul. 2026.</li>
+    </ul>
   </section>
 
   <section id="education">
@@ -146,32 +144,20 @@
 
   <section id="projects">
     <p class="label">Projects</p>
-    <div class="panel">
-      <div class="row">
-        <span class="idx">2023</span>
-        <div>
-          <strong>National Undergraduate Innovation and Entrepreneurship Training Program</strong>
-          <p class="meta">“Research on the (<i>m</i><sub>1</sub>, <i>m</i><sub>2</sub>)-near-Skolem Sequence Conjecture.” Outstanding Project Completion.</p>
-        </div>
-      </div>
-      <div class="row">
-        <span class="idx">Software</span>
-        <div>
-          <strong>Family Education Course Database Operation and Maintenance Software V1.0</strong>
-          <p class="meta">Computer software copyright.</p>
-        </div>
-      </div>
-    </div>
+    <ul class="dots">
+      <li>National Undergraduate Innovation and Entrepreneurship Training Program: “Research on the (<i>m</i><sub>1</sub>, <i>m</i><sub>2</sub>)-near-Skolem Sequence Conjecture” — Awarded Outstanding Project Completion, 2023.</li>
+      <li>Computer Software Copyright: Family Education Course Database Operation and Maintenance Software V1.0.</li>
+    </ul>
   </section>
 
   <section id="awards">
     <p class="label">Awards</p>
-    <div class="panel">
-      <div class="row"><span class="idx">2025–2026</span><p><strong>Excellent Student Leader</strong>, University of Chinese Academy of Sciences</p></div>
-      <div class="row"><span class="idx">2024</span><p><strong>Outstanding Graduate</strong>, Nanjing Normal University</p></div>
-      <div class="row"><span class="idx">2023</span><p><strong>Second Prize (Class A)</strong>, 14th National College Student Mathematics Competition</p></div>
-      <div class="row"><span class="idx">2022</span><p><strong>Xingzhi Talent Scholarship</strong>, Nanjing Normal University</p></div>
-    </div>
+    <ul class="dots">
+      <li>Excellent Student Leader, University of Chinese Academy of Sciences, 2025, 2026.</li>
+      <li>Outstanding Graduate, Nanjing Normal University, 2024.</li>
+      <li>Second Prize (Class A), The 14th National College Student Mathematics Competition, 2023.</li>
+      <li>Xingzhi Talent Scholarship, Nanjing Normal University, 2022.</li>
+    </ul>
   </section>
 
   <section id="life">
@@ -187,10 +173,8 @@
 
   <section id="contact">
     <p class="label">Contact</p>
-    <div class="panel">
-      <p>Email: <a href="mailto:hujinming@amss.ac.cn">hujinming@amss.ac.cn</a></p>
-      <p style="margin-top:8px">Website: <a href="https://hajimi9256.github.io/">hajimi9256.github.io</a></p>
-    </div>
+    <p>Email: <a href="mailto:hujinming@amss.ac.cn">hujinming@amss.ac.cn</a></p>
+    <p style="margin-top:8px">Website: <a href="https://hajimi9256.github.io/">hajimi9256.github.io</a></p>
   </section>
 
   <footer>© Jinming Hu</footer>
