@@ -9,8 +9,8 @@
   <title>Jinming Hu</title>
   <style>
     :root{
-      --bg:#eef4fb; --panel:#ffffff; --ink:#1b2a41; --muted:#5d6f88;
-      --accent:#2a6bb5; --line:#d5e1f0;
+      --bg:#ffffff; --ink:#1a1a1a; --muted:#5a6470;
+      --accent:#2a6bb5; --line:#e3e9f1; --soft:#f4f8fd;
       --serif:"Times New Roman",Times,serif;
     }
     *{box-sizing:border-box}
@@ -19,60 +19,57 @@
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-    .wrap{width:min(900px,calc(100% - 40px));margin:0 auto}
+    .wrap{width:min(860px,calc(100% - 40px));margin:0 auto}
 
-    .label{color:var(--accent);font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;font-weight:bold}
+    .label{color:var(--accent);font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;font-weight:bold;border-left:3px solid var(--accent);padding-left:10px}
 
     /* Top bar */
-    .topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--accent)}
     .topbar .name{font-weight:bold;font-size:17px}
     .topbar nav{display:flex;gap:20px;font-size:15px}
     .topbar nav a{color:var(--muted)}
     .topbar nav a:hover{color:var(--accent);text-decoration:none}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 240px;gap:48px;align-items:center;padding:64px 0 48px}
-    h1{font-size:clamp(40px,6vw,56px);line-height:1.1;margin:0 0 10px;font-weight:bold}
+    .hero{display:grid;grid-template-columns:1fr 230px;gap:48px;align-items:start;padding:56px 0 40px}
+    h1{font-size:clamp(40px,6vw,54px);line-height:1.1;margin:0 0 10px;font-weight:bold}
     .role{font-size:20px;margin:0 0 4px}
     .affil{color:var(--muted);margin:0 0 22px}
-    .bio{max-width:580px;margin:0 0 26px}
+    .intro{margin:0 0 26px;font-size:18px}
     .btns{display:flex;flex-wrap:wrap;gap:10px}
     .btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);border-radius:3px;color:var(--accent);text-decoration:none}
     .btn:hover{background:var(--accent);color:#fff;text-decoration:none}
     .btn.solid{background:var(--accent);color:#fff}
 
     .portrait{margin:0}
-    .portrait img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line);background:var(--panel)}
+    .portrait img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
 
     /* Sections */
-    section{padding:36px 0;border-top:1px solid var(--line)}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px 24px}
+    section{padding:34px 0;border-top:1px solid var(--line)}
+    .panel{background:var(--soft);border-left:3px solid var(--accent);padding:20px 24px}
     .panel p{margin:0}
-    .tags{display:flex;flex-wrap:wrap;gap:8px}
-    .tags span{font-size:15px;color:var(--accent);border:1px solid var(--line);background:var(--panel);padding:4px 12px;border-radius:3px}
 
     table{width:100%;border-collapse:collapse;font-size:16px}
     th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-    th{color:var(--muted);font-size:14px;font-weight:bold}
+    th{color:var(--accent);font-size:14px;font-weight:bold}
     td.gpa{color:var(--accent);white-space:nowrap}
     td.year{color:var(--muted);white-space:nowrap}
 
     .row{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
-    .row:last-child{border-bottom:0}
+    .row:last-child{border-bottom:0;padding-bottom:0}
     .row:first-child{padding-top:0}
-    .row:last-child{padding-bottom:0}
-    .idx{color:var(--muted);min-width:64px}
+    .idx{color:var(--accent);min-width:64px}
     .meta{color:var(--muted);font-size:15px;margin:2px 0 0}
 
     /* Gallery */
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .gallery figure{margin:0}
-    .gallery img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line);background:var(--panel)}
+    .gallery img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
 
-    footer{padding:26px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+    footer{padding:26px 0 36px;border-top:2px solid var(--accent);color:var(--muted);font-size:14px;text-align:center}
 
     @media (max-width:820px){
-      .hero{grid-template-columns:1fr;gap:26px;padding:40px 0 32px}
+      .hero{grid-template-columns:1fr;gap:26px;padding:40px 0 30px}
       .portrait{order:-1;max-width:200px}
       .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none}
       .gallery::-webkit-scrollbar{display:none}
@@ -95,9 +92,9 @@
   <header class="topbar">
     <span class="name">Jinming Hu</span>
     <nav aria-label="Main navigation">
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -108,7 +105,7 @@
       <h1>Jinming Hu</h1>
       <p class="role">Operational Research and Cybernetics</p>
       <p class="affil">Academy of Mathematics and Systems Science, Chinese Academy of Sciences · Beijing</p>
-      <p class="bio">I study distributed quantum computing, quantum resource theory, quantum error mitigation and correction, and learning theory, with a focus on how they fit together for scalable quantum systems.</p>
+      <p class="intro">My research focuses on distributed quantum computing, quantum resource theory, quantum error mitigation &amp; correction, and machine learning (learning theory)—specifically their integration for scalable quantum systems.</p>
       <div class="btns">
         <a class="btn solid" href="mailto:hujinming@amss.ac.cn">Email</a>
         <a class="btn" href="https://github.com/hajimi9256">GitHub</a>
@@ -118,53 +115,6 @@
       <img src="photo.jpg" alt="Portrait of Jinming Hu">
     </figure>
   </div>
-
-  <section id="research">
-    <p class="label">Research Interests</p>
-    <div class="tags" aria-label="Research topics">
-      <span>Distributed quantum computing</span>
-      <span>Quantum resource theory</span>
-      <span>Quantum error mitigation</span>
-      <span>Quantum error correction</span>
-      <span>Learning theory</span>
-    </div>
-  </section>
-
-  <section id="education">
-    <p class="label">Education</p>
-    <div class="panel">
-      <table>
-        <thead>
-          <tr><th>Year</th><th>Degree</th><th>Institution</th><th>GPA</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="year">2024–2029 (expected)</td><td>Ph.D.</td><td>Academy of Mathematics and Systems Science, Chinese Academy of Sciences</td><td class="gpa">3.79</td></tr>
-          <tr><td class="year">2020–2024</td><td>B.Sc.</td><td>Honors College, Nanjing Normal University</td><td class="gpa">3.96</td></tr>
-        </tbody>
-      </table>
-      <p class="meta" style="margin-top:14px"><strong>Certifications:</strong> Teaching Certificate (High School Mathematics); Computer Level 2; CET-6 (584)</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <p class="label">Projects</p>
-    <div class="panel">
-      <div class="row">
-        <span class="idx">2023</span>
-        <div>
-          <strong>National Undergraduate Innovation and Entrepreneurship Training Program</strong>
-          <p class="meta">“Research on the (m₁, m₂)-near-Skolem Sequence Conjecture.” Outstanding Project Completion.</p>
-        </div>
-      </div>
-      <div class="row">
-        <span class="idx">Software</span>
-        <div>
-          <strong>Family Education Course Database Operation and Maintenance Software V1.0</strong>
-          <p class="meta">Computer software copyright.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="publications">
     <p class="label">Publications</p>
@@ -176,6 +126,40 @@
       <div class="row">
         <span class="idx">Jul. 2026</span>
         <p>J. Hu and Y. Wang, “Inductive Hamiltonian quantum network: An interpretable framework for hierarchical feature modeling,” in <em>Proc. 45th Chinese Control Conference (CCC)</em>, Changsha, China.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <p class="label">Education</p>
+    <table>
+      <thead>
+        <tr><th>Year</th><th>Degree</th><th>Institution</th><th>GPA</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="year">2024–2029 (expected)</td><td>Ph.D.</td><td>Academy of Mathematics and Systems Science, Chinese Academy of Sciences</td><td class="gpa">3.79</td></tr>
+        <tr><td class="year">2020–2024</td><td>B.Sc.</td><td>Honors College, Nanjing Normal University</td><td class="gpa">3.96</td></tr>
+      </tbody>
+    </table>
+    <p class="meta" style="margin-top:14px"><strong>Certifications:</strong> Teaching Certificate (High School Mathematics); Computer Level 2; CET-6 (584)</p>
+  </section>
+
+  <section id="projects">
+    <p class="label">Projects</p>
+    <div class="panel">
+      <div class="row">
+        <span class="idx">2023</span>
+        <div>
+          <strong>National Undergraduate Innovation and Entrepreneurship Training Program</strong>
+          <p class="meta">“Research on the (<i>m</i><sub>1</sub>, <i>m</i><sub>2</sub>)-near-Skolem Sequence Conjecture.” Outstanding Project Completion.</p>
+        </div>
+      </div>
+      <div class="row">
+        <span class="idx">Software</span>
+        <div>
+          <strong>Family Education Course Database Operation and Maintenance Software V1.0</strong>
+          <p class="meta">Computer software copyright.</p>
+        </div>
       </div>
     </div>
   </section>
